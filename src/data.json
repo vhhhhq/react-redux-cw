@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "question": "In which continent are Chile, Argentina and Brazil?",
+            "choices": ["North America", "South America", "Europe", "Australasia"],
+            "answer": "South America"
+        },
+        {
+            "question": "Which brand of soup featured in one of Andy Warhol’s most famous pop art pieces?",
+            "choices": ["Heinz", "Campbell’s", "Baxters","Knorr"],
+            "answer": "Campbell’s"
+        },
+        {
+            "question": "The Mad Hatter and the Cheshire Cat are characters in which famous book?",
+            "choices": ["Winne-the-Pooh", "Charlotte's Web", "Charlie and the Chocolate Factory", "Alice in Wonderland"],
+            "answer": "Alice in Wonderland"
+        },
+        {
+            "question": "The Statue of Liberty was a gift to the United States from which European country?",
+            "choices": ["Belgium", "Germany", "Spain", "France"],
+            "answer": "France"
+        },
+        {
+            "question": "Which traditional Spanish dance originated in Andalusia and is recognised by UNESCO as a heritage of humanity?",
+            "choices": ["Sardana", "Tango", "Flamenco", "Paso Doble"],
+            "answer": "Flamenco"
+        },
+        {
+            "question": "Which artist famously cut off his own ear?",
+            "choices": ["Vincent Van Gogh", "Claude Monet", "Salvador Dali", "Pablo Picasso"],
+            "answer": "Vincent Van Gogh"
+        },
+        {
+            "question": "Which Danish-Norwegian band released the hit song ‘Barbie Girl’ in 1997?",
+            "choices": ["ABBA", "Vanilla Ice", "Aqua", "Bjork"],
+            "answer": "Aqua"
+        },
+        {
+            "question": "Which composer scored 2000s classics such as Gladiator, Hannibal, Madagascar and Black Hawk Down?",
+            "choices": ["Hans Zimmer", "John Williams", "Danny Elfman", "James Horner"],
+            "answer": "Hans Zimmer"
+        },
+        {
+            "question": "What other country, besides the US, uses the US dollar as its official currency?",
+            "choices": ["Ecuador", "Canada", "Mexico", "United Kingdom"],
+            "answer": "Ecuador"
+        },
+        {
+            "question": "In which city were the 1992 Summer Olympics held?",
+            "choices": ["Atlanta", "Barcelona", "Sydney", "Seoul"],
+            "answer": "Barcelona"
+        }
+    ]
+}
