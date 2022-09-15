@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { useEffect } from "react";
-import { useDispatch , useSelector} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { startQuiz } from "../../store/actions";
 
 
@@ -32,14 +32,9 @@ const Start = () => {
       <div className="startBox">
         <div >
           <div >
-            <img src='' className="trophy" alt="" srcset="" />
-            <h1>Start</h1>
-            <p>Codify Test</p>
-            <p>Time:&nbsp;&nbsp;{time}sec</p>
-            <section>
-              {/* <label htmlFor=""><input type="number" className="timeInput" value={minute} onChange={(e) =>setMinute(parseInt(e.target.value))}  /> min</label>
-              <label htmlFor=""><input type="number" className="timeInput" value={second} onChange={(e) =>setSecond(parseInt(e.target.value))}  /> sec</label> */}
-            </section>
+            <h1>QUIZ</h1>
+            <p>Time:{time}sec</p>
+            
             <button className="startButton" onClick={handleQuizStart}>
               START
             </button>

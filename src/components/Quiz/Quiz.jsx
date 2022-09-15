@@ -43,14 +43,14 @@ const Quiz = () => {
   };
 
 
-  const handlePrev = () => {
-    setError("");
-    dispatch(prevQuiz());
-  };
+//   const handlePrev = () => {
+//     setError("");
+//     dispatch(prevQuiz());
+//   };
 
-  const handleResult = () => {
-    dispatch(timeOut());
-  };
+//   const handleResult = () => {
+//     dispatch(timeOut());
+//   };
 
 
   const handleNext = (e) => {
@@ -123,7 +123,7 @@ const Quiz = () => {
       </section>
         <section className="questionBottom">
 
-            <button className="button" onClick={ handleResult }>Result</button>
+            {/* <button className="button" onClick={ handleResult }>Result</button> */}
 
           {activeQuestion + 1 >= quizData?.data.length ? (
             <button className="button nextBtn" onClick={ handleSubmit }>Submit</button>

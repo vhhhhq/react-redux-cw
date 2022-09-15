@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { resetQuiz } from "../../store/actions";
 import quizData from "../../data.json";
-import Modal from "../Modal/Modal";
 
 const End = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ const End = () => {
 
   return (
     <div className="endBox">
-      <img src='' className="trophy" alt="" srcset="" />
       <h3>Your results</h3>
       <p>
         {correctAnswers} of {quizData?.data.length}
@@ -41,24 +39,21 @@ const End = () => {
         <strong>Your time:</strong> {time}sec
       </p>
       <section>
-        <button className="button" onClick={() => setModal(true)}>
-          Check your answers
-        </button>
         <button
           className="button"
           style={{ marginLeft: "20px" }}
           onClick={handleReset}
         >
-          Try again
+          Restart
         </button>
       </section>
-      <Modal show={modal}>
+      <div show={modal}>
         <section className="modalBody">
           <header>
             <p className="">Your Answers</p>
             <p  style={{
               cursor: "pointer"
-            }} onClick={() => setModal(false)}>X</p>
+            }} onClick={() => setModal(false)}></p>
           </header>
           <section className="content">
             <ul>
@@ -86,7 +81,7 @@ const End = () => {
             </ul>
           </section>
         </section>
-      </Modal>
+      </div>
     </div>
   );
 };
