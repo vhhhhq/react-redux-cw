@@ -1,20 +1,14 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-
+import { createStore } from 'redux';
+import rootReducer from './reducer';
+import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import {persistReducer } from 'redux-persist'
 
-import quizReducer from "./reducer";
-
-const reducers =persistReducer({storage: storage,key:'a27' }, combineReducers({
-    quizReducer
-}));
-
-let middleware = [];
-if (process.env.NODE_ENV === "development") {
-  middleware = [...middleware, thunk];
-} else {
-  middleware = [...middleware, thunk];
+const persistConfig = {
+  key: 'root',
+  storage,
 }
 
-export const store = createStore(reducers, {}, applyMiddleware(...middleware));
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = createStore(persistedReducer)
+export const persistor = persistStore(store)
