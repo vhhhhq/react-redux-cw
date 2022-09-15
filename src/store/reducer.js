@@ -72,6 +72,7 @@ import {
 
         },
         {id: 4,
+            multiple: true,
             question: 'Who was the first Indian to win the World Amateur Billiards title?',
             answers: [
                 {
@@ -88,7 +89,7 @@ import {
                  },
                  {
                      answer: 'Manoj Kothari',
-                     correct: false 
+                     correct: true
                  }
             ]
 
@@ -116,6 +117,7 @@ import {
 
         },
         {id: 6,
+            multiple: true,
             question: 'When was Amateur Athletics Federation of India established?',
             answers: [
                 {
