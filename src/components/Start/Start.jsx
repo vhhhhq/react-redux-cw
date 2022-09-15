@@ -29,13 +29,13 @@ const Start = () => {
       }
     }, [minute,second])
     return (
-      <div className="startBox">
+      <div >
         <div >
           <div >
             <h1>QUIZ</h1>
             <p>Time:{time}sec</p>
             
-            <button className="startButton" onClick={handleQuizStart}>
+            <button onClick={handleQuizStart}>
               START
             </button>
           </div>

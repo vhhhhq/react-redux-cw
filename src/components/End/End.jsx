@@ -25,7 +25,7 @@ const End = () => {
 
 
   return (
-    <div className="endBox">
+    <div>
       <h3>Your results</h3>
       <p>
         {correctAnswers} of {quizData?.data.length}
@@ -40,25 +40,23 @@ const End = () => {
       </p>
       <section>
         <button
-          className="button"
-          style={{ marginLeft: "20px" }}
           onClick={handleReset}
         >
           Restart
         </button>
       </section>
       <div show={modal}>
-        <section className="modalBody">
+        <section>
           <header>
             <p className="">Your Answers</p>
             <p  style={{
               cursor: "pointer"
             }} onClick={() => setModal(false)}></p>
           </header>
-          <section className="content">
+          <section>
             <ul>
               {answers.map((result, i) => (
-                <li key={i} className="mb-6">
+                <li key={i} >
                   <p>
                     <strong>{result.q}</strong>
                   </p>
@@ -72,7 +70,7 @@ const End = () => {
                     Your answer: {result.a}
                   </p>
                   {result.a !== quizData?.data[i].answer && (
-                    <p className="bg-warning">
+                    <p>
                       Correct answer: {quizData?.data[i].answer}
                     </p>
                   )}

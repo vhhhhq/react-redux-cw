@@ -43,16 +43,6 @@ const Quiz = () => {
   };
 
 
-//   const handlePrev = () => {
-//     setError("");
-//     dispatch(prevQuiz());
-//   };
-
-//   const handleResult = () => {
-//     dispatch(timeOut());
-//   };
-
-
   const handleNext = (e) => {
     if (selected === "") {
       return setError("Please select one option!");
@@ -94,19 +84,19 @@ const Quiz = () => {
     );
   };
   return (
-    <div className="questionBox">
-      <section className="questionHead">
+    <div>
+      <section>
         <h3>
           Question {activeQuestion + 1}/{quizData?.data.length}
         </h3>
         <h5>{timer}</h5>
       </section>
-      <section className="middleBox" >
-        <div className="question" >
+      <section>
+        <div>
         <p>{data?.question}</p>
         {error && <div>{error}</div>}
         </div>
-        <div className="option" ref={radiosWrapper}>
+        <div ref={radiosWrapper}>
           {data?.choices.map((choice, i) => (
             <label className={`${choice === selected ? `selected`: `text`}`} key={i}>
               <input
@@ -121,14 +111,12 @@ const Quiz = () => {
           ))}
         </div>
       </section>
-        <section className="questionBottom">
-
-            {/* <button className="button" onClick={ handleResult }>Result</button> */}
+        <section>
 
           {activeQuestion + 1 >= quizData?.data.length ? (
-            <button className="button nextBtn" onClick={ handleSubmit }>Submit</button>
+            <button onClick={ handleSubmit }>Submit</button>
           ) : (
-            <button className="button nextBtn" onClick={ handleNext }>Next</button>
+            <button onClick={ handleNext }>Next</button>
           )}
           
         </section>
