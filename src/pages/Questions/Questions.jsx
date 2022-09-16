@@ -177,9 +177,7 @@ const Questions = () => {
               </h2>
             </div>
           </Modal>
-          <div>
-            <button>button</button>
-          </div>
+          
         </div>
       </div>
     );
