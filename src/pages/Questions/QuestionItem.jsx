@@ -1,32 +1,29 @@
-import React from 'react'
+import React from "react";
+import './Questions.scss'
 
-const QuestionItem = (question) => {
+
+export const QuestionItem = ({question, handleChange, isMultiple}) => {
+  const answerType = isMultiple ? 'checkbox' : 'radio';
+
   return (
-    <div key={question.id}>
-                    <div className='question-title'>
-                        <h2>{question.question}</h2>
-                    </div>
-
-                    <div className='question-options'>
-                        <div className='question-option'>
-                            <input type="radio" id={question.id} name={question.id} value={1} />
-                            <label htmlFor={question.answers[0].answer}>{question.answers[0].answer}</label>
-                        </div>
-                        <div className='question-option'>
-                            <input type="radio" id={question.id} name={question.id} value={2} />
-                            <label htmlFor={question.answers[1].answer}>{question.answers[1].answer}</label>
-                        </div>
-                        <div className='question-option'>
-                            <input type="radio" id={question.id} name={question.id} value={3} />
-                            <label htmlFor={question.answers[2].answer}>{question.answers[2].answer}</label>
-                        </div>
-                        <div className='question-option'>
-                            <input type="radio" id={question.id} name={question.id} value={4} />
-                            <label htmlFor={question.answers[3].answer}>{question.answers[3].answer}</label>
-                        </div>
-                    </div>
-                </div>
-  )
-}
-
-export default QuestionItem
+    <div className="question-wrapper" key={question.id}>
+      <div className="question-title">{question.question}</div>
+      <div className="question-options">
+        {question.answers.map(item => (
+          <div key={item.answer} className="question-option">
+            <input
+              type={answerType}
+              name={question.question}
+              id={item.answer}
+              value={item.correct}
+              onChange={handleChange}
+            />
+            <label htmlFor={item.answer}>
+              {item.answer}
+            </label>
+          </div>
+        ) )}
+      </div>
+    </div>
+  );
+};
