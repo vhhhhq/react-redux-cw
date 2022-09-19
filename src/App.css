@@ -1,8 +1,11 @@
+
 .app {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    font-family: "Roboto", sans-serif;
     padding: 20px;
     background: rgb(165, 203, 218);
 }

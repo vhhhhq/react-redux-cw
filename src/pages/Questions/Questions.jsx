@@ -78,7 +78,7 @@ const Questions = () => {
       calculateResults();
     };
   
-    const title = timeOut ? 'Ваше время вышло' : 'Вы завершили тест!'
+    const title = timeOut ? 'Your time is up.' : 'You have completed the test!'
   
     return (
       <div className='questions-container'>
@@ -131,7 +131,7 @@ const Questions = () => {
               <div className="quiz-time">
                 <div>
                 <h1>QUIZ</h1>
-                  <Row gutter={16}>
+                  <Row gutter={60}>
                     <Col span={12}>
                       <Countdown value={deadline} onFinish={onTimerFinish} />
                     </Col>
